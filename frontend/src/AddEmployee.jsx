@@ -86,6 +86,7 @@ const handelSubmit  = (event)=>{
 					<input type="text" class="form-control" id="inputDateOfJoining" placeholder="" autoComplete='off'
 					onChange={e => setData({...data, DateOfJoining: e.target.value})} />
 				</div> */}
+				
 				{/* <div class="col-12">
 					<label for="inputDateOfBirth" class="form-label">Date Of Birth</label>
 					<input type="date" class="form-control" id="inputDateOfBirth" placeholder="" autoComplete='off'

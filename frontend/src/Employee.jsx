@@ -6,7 +6,7 @@ function Employee() {
   const [data, setData] = useState([])
 
   useEffect(()=> {
-    axios.get('http://localhost:8075/getEmployee')
+    axios.get('https://employee-management-backend-cmh4.onrender.com/getEmployee')
     .then(res => {
       if(res.data.Status === "Success") {
         setData(res.data.Result);
@@ -18,7 +18,7 @@ function Employee() {
   }, [])
 
   const handleDelete = (id) => {
-    axios.delete('http://localhost:8075/delete/'+id)
+    axios.delete('https://employee-management-backend-cmh4.onrender.com/delete/'+id)
     .then(res => {
       if(res.data.Status === "Success") {
         window.location.reload(true);
@@ -61,7 +61,7 @@ function Employee() {
                   <td>{employee.address}</td>
                   <td>{employee.project}</td>
                   <td>{
-                    <img src={`http://localhost:8075/images/`+employee.image} alt="Employee Images" className='employee_image'/>
+                    <img src={`https://employee-management-backend-cmh4.onrender.com/images/`+employee.image} alt="Employee Images" className='employee_image'/>
                     }</td>
                   {/* <td>{employee.DateOfJoining}</td>
                   <td>{employee.DateOfBirth}</td> */}

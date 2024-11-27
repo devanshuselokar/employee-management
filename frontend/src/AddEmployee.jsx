@@ -35,7 +35,7 @@ const handelSubmit  = (event)=>{
     formdata.append("gender", data.gender);
 	formdata.append("role", data.role);
     
-    axios.post('http://localhost:8075/create',formdata)
+    axios.post('/create',formdata)
     .then(res => {
       navigate('/employee')
     })

@@ -7,7 +7,7 @@ function Dashboard() {
     const navigate = useNavigate()
     axios.defaults.withCredentials = true;
     useEffect(() =>{
-        axios.get('http://localhost:8075/dashboard/')
+        axios.get('https://employee-management-backend-cmh4.onrender.com/dashboard/')
         .then(res => {
             if(res.data.Status === "Success"){
                 if(res.data.role=== "admin"){
@@ -22,7 +22,7 @@ function Dashboard() {
         })
     },[])
     const handleLogout = () => {
-        axios.get('http://localhost:8075/logout/')
+        axios.get('https://employee-management-backend-cmh4.onrender.com/logout/')
         .then(res => {
             navigate('/start')
         })
